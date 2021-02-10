@@ -68,16 +68,21 @@
     <Compile Include="Assets\Game Objects\Actors\Enemy\BasicEnemyAi.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\ChaseState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\Damage.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Enemy\EnemyDead.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\IdleState.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Enemy\attack.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Guns\MuzzleFlash.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\Die.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\Gun.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerDamaged.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerIdle.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerReload.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
     <Compile Include="Assets\Sprites\Placeholders\spriteRotator.cs" />
-    <Compile Include="Assets\attack.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -262,7 +267,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/JART/Documents/GitHub/godComplex/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/JART/Documents/GitHub/godComplex/godComplex/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

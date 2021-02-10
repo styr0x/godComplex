@@ -7,7 +7,8 @@ TagManager:
   - Enemy
   - LookPoint
   - Gun
-  - "Fj\xE4rt"
+  - DamageFilter
+  - Canvas
   layers:
   - Default
   - TransparentFX

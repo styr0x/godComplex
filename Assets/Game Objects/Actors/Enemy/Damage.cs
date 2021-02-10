@@ -18,6 +18,7 @@ public class Damage : StateMachineBehaviour
         {
             animator.SetBool("takingDamage", false);
         }
+
     }
 
 

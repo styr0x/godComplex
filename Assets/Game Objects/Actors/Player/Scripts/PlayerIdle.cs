@@ -14,9 +14,7 @@ public class PlayerIdle : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        float moving = Input.GetAxisRaw("Vertical");
-
-        if (moving != 0)
+        if (Input.GetAxisRaw("Horizontal") !=0 || Input.GetAxisRaw("Vertical") != 0)
         {
             animator.SetBool("isWalking", true);
             animator.SetBool("isIdle", false);

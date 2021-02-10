@@ -20,7 +20,6 @@ public class spriteRotator : MonoBehaviour
     Vector3 lookPointDir, camDir;
 
     public float enemyAngle, enemyIsFacing, angleToCamera, angleToLookpoint;
-    bool hasBeenDiscovered;
     string lookingAt;
 
 
@@ -31,7 +30,6 @@ public class spriteRotator : MonoBehaviour
         animator = GetComponent<Animator>();
         theSpriteRenderer = GetComponent<SpriteRenderer>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
-        hasBeenDiscovered = false;
     }
 
     // Update is called once per frame
