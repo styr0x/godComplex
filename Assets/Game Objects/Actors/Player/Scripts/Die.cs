@@ -22,11 +22,8 @@ public class Die : MonoBehaviour
     public void deathRotation()
     {
         float singleStep = speed * Time.deltaTime;
-        Vector3 randomDir = new Vector3(0, Random.Range(1f, 90f), 0);
-        while (theAnimator.GetBool("isDying") == true)
-        {
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, randomDir, singleStep, 0.0f);
-        }
+        Vector3 randomDir = new Vector3(0, Random.Range(0f, 1f), 0);
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, randomDir, singleStep, 0.0f);
         
     }
 

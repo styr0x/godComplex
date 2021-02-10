@@ -82,6 +82,7 @@
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
+    <Compile Include="Assets\PlayerDead.cs" />
     <Compile Include="Assets\Sprites\Placeholders\spriteRotator.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

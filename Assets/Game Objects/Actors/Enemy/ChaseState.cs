@@ -5,25 +5,32 @@ using UnityEngine;
 public class ChaseState : StateMachineBehaviour
 {
     GameObject player;
+    Animator playerAnimator;
     float distance;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerAnimator = player.GetComponent<Animator>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         distance = Vector3.Distance(animator.transform.position, player.transform.position);
+            if (playerAnimator.GetInteger("health") <= 0)
+        {
+            animator.SetBool("isChasing", false);
+        }
+
 
         if (distance > animator.GetFloat("discoverDistance"))
         {
             //Do idle state
             animator.SetBool("isChasing", false);
         }
-
+        
         else if (distance > animator.GetFloat("attackDistance"))
         {
             animator.transform.position += animator.transform.forward * animator.GetFloat("speed") * Time.deltaTime;
@@ -33,6 +40,9 @@ public class ChaseState : StateMachineBehaviour
         {
             animator.SetBool("isAttacking", true);
         }
+        
+
+
 
 
 

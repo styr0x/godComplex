@@ -5,11 +5,13 @@ using UnityEngine;
 public class AttackState : StateMachineBehaviour
 {
     GameObject player;
+    Animator playerAnimator;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerAnimator = player.GetComponent<Animator>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -21,6 +23,11 @@ public class AttackState : StateMachineBehaviour
         {
             animator.SetBool("isAttacking", false);
         }
+        else if (playerAnimator.GetInteger("health") <= 0)
+        {
+            animator.SetBool("hasKilled", true);
+        }
+        
 
     }
 

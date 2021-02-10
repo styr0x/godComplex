@@ -631,6 +631,7 @@
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
+    <Compile Include="Assets\PlayerDead.cs" />
     <Compile Include="Assets\Sprites\Placeholders\spriteRotator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
