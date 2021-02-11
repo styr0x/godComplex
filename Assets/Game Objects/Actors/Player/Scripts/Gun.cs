@@ -8,27 +8,44 @@ public class Gun : MonoBehaviour {
     public float fireRate = 500f;
     public float nextTimeToFire = 0f;
 
+    int ammoInClip, totalAmmo, clipCapacity;
+    bool canReload;
+
     public Camera fpsCam;
     Animator enemyAnimator, playerAnimator;
     Rigidbody theRigidBody;
 
 
-
+    void Start()
+    {
+        playerAnimator = GetComponentInParent<Animator>();
+        clipCapacity = 7;
+        ammoInClip = playerAnimator.GetInteger("ammoInClip");
+        totalAmmo = playerAnimator.GetInteger("totalAmmo");
+        canReload = true;
+    }
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1") && Time.time > nextTimeToFire)
+        if (Input.GetButtonDown("Fire1") && Time.time > nextTimeToFire && ammoInClip > 0)
         {
             nextTimeToFire = Time.time + fireRate;
             shoot();
+        }
+
+        if (Input.GetButton("Reload") && totalAmmo > 0 && canReload == true && ammoInClip < 7)
+        {
+            canReload = false;
+            reload();
         }
     }
 
     void shoot()
     {
-        playerAnimator = GetComponentInParent<Animator>();
+        ammoInClip -= 1;
         playerAnimator.SetBool("isShooting", true);
+        Debug.Log("Ammo in clip: " + ammoInClip);
 
         RaycastHit hit;
 
@@ -47,6 +64,21 @@ public class Gun : MonoBehaviour {
                 Debug.Log(hit.collider.gameObject.GetComponent<Animator>().GetInteger("health"));
             }
         }
+    }
+
+    void reload()
+    {
+        playerAnimator.SetBool("isReloading", true);   
+    }
+
+    public void doneReloading()
+    {
+        totalAmmo -= clipCapacity - ammoInClip;
+        ammoInClip = clipCapacity;
+        playerAnimator.SetBool("isReloading", false);
+        canReload = true;
+        Debug.Log("Total ammo: " + totalAmmo);
+        Debug.Log("Reloaded, total clip ammo is now: " + ammoInClip);
     }
 
 

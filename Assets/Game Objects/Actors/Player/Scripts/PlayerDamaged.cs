@@ -21,6 +21,7 @@ public class PlayerDamaged : StateMachineBehaviour
         if (animator.GetInteger("health") <= 0)
         {
             animator.SetBool("isDying", true);
+            animator.SetBool("canMove", false);
             Debug.Log("I'm dead now!");
         }
     }

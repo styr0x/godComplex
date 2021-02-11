@@ -19,6 +19,7 @@ public class ChaseState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         distance = Vector3.Distance(animator.transform.position, player.transform.position);
+
             if (playerAnimator.GetInteger("health") <= 0)
         {
             animator.SetBool("isChasing", false);

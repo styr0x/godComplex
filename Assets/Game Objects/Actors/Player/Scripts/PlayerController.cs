@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
+    Animator animator;
 
 
     public float speed = 6f;
@@ -16,14 +17,26 @@ public class PlayerController : MonoBehaviour
 
     Vector3 gravityVelocity;
 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        Gravity();
-        Jump();
-        Move();
-        Crouch();
+        if (animator.GetBool("canMove") == true)
+        {
+            Gravity();
+            Jump();
+            Move();
+            Crouch();
+        }
+        else if (animator.GetBool("canMove") == false)
+        {
+
+        }
+
     }
 
     private void Gravity()
