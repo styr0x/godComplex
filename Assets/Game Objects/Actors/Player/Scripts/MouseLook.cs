@@ -12,7 +12,7 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;    
     }
 

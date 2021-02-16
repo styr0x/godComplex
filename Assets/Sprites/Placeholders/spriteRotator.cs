@@ -15,9 +15,11 @@ public class spriteRotator : MonoBehaviour
     public Sprite slightLeft;
 
     SpriteRenderer theSpriteRenderer;
-    Transform lookPoint, cam;
+    Transform cam;
+    public Transform lookPoint;
     Animator animator;
     Vector3 lookPointDir, camDir;
+    GameObject currentWayPoint;
 
     public float enemyAngle, enemyIsFacing, angleToCamera, angleToLookpoint;
     string lookingAt;
@@ -26,17 +28,23 @@ public class spriteRotator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lookingAt = "LookPoint";
         animator = GetComponent<Animator>();
         theSpriteRenderer = GetComponent<SpriteRenderer>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        currentWayPoint = GameObject.FindGameObjectWithTag("WayPoints").GetComponent<WayPoints>().currentWayPoint;
+        lookPoint = currentWayPoint.transform;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        
+        Debug.Log(currentWayPoint);
         //Vart spriten skall titta
-        lookPoint = GameObject.FindGameObjectWithTag(lookingAt).transform;
+        
+
 
         //"Billboardar" spriten
         transform.LookAt(Camera.main.transform.position, Vector3.up);
@@ -121,7 +129,7 @@ public class spriteRotator : MonoBehaviour
 
 
 
-        //Debug.Log("Angle to camera: " + enemyAngle);
+   
 
     }
 }
