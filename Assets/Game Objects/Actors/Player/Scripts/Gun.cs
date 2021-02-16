@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class Gun : MonoBehaviour {
 
@@ -6,7 +7,7 @@ public class Gun : MonoBehaviour {
     public float range = 100f;
     public float knockBack = -10f;
     public float fireRate = 500f;
-    public float nextTimeToFire = 0f;
+    float nextTimeToFire = 0f;
 
     int ammoInClip, totalAmmo, clipCapacity;
     bool canReload;
@@ -14,10 +15,12 @@ public class Gun : MonoBehaviour {
     public Camera fpsCam;
     Animator enemyAnimator, playerAnimator;
     Rigidbody theRigidBody;
+    TextMeshProUGUI ammoUi;
 
 
     void Start()
     {
+        ammoUi = GameObject.FindGameObjectWithTag("Ammo").GetComponent<TextMeshProUGUI>();
         playerAnimator = GetComponentInParent<Animator>();
         clipCapacity = 7;
         ammoInClip = playerAnimator.GetInteger("ammoInClip");
@@ -27,6 +30,7 @@ public class Gun : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        ammoUi.SetText(ammoInClip + "/" + totalAmmo);
 
         if (Input.GetButtonDown("Fire1") && Time.time > nextTimeToFire && ammoInClip > 0)
         {
@@ -48,6 +52,7 @@ public class Gun : MonoBehaviour {
         Debug.Log("Ammo in clip: " + ammoInClip);
 
         RaycastHit hit;
+        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward);
 
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
