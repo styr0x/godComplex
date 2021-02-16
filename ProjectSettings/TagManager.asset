@@ -5,15 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - LookPoint
   - Gun
   - DamageFilter
   - Canvas
-  - HealthBar
-  - Ammo
-  - RealUiCanvas
-  - Enemies
-  - WayPoint
-  - WayPoints
   layers:
   - Default
   - TransparentFX
@@ -23,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 
