@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
+    
     private void Gravity()
     {
 

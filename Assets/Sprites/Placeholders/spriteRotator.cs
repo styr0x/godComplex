@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spriteRotator : MonoBehaviour
 {
-
+    [Header("Sprites")]
     public Sprite front;
     public Sprite slightRight;
     public Sprite right;
@@ -13,7 +13,7 @@ public class spriteRotator : MonoBehaviour
     public Sprite slightBackLeft;
     public Sprite Left;
     public Sprite slightLeft;
-
+    [Header("restn")]
     SpriteRenderer theSpriteRenderer;
     Transform cam;
     public Transform lookPoint;
@@ -39,12 +39,6 @@ public class spriteRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        Debug.Log(currentWayPoint);
-        //Vart spriten skall titta
-        
-
 
         //"Billboardar" spriten
         transform.LookAt(Camera.main.transform.position, Vector3.up);
@@ -67,19 +61,23 @@ public class spriteRotator : MonoBehaviour
 
         //Gör så att spriten normalt inte är spegelvänd
         theSpriteRenderer.flipX = false;
+
         
 
         //Resettar ti 0 grader
+        
         if (enemyAngle < 0)
         {
             enemyAngle += 360;
         }
 
-       
+        Debug.Log(enemyAngle);
+
         //The sprite rotation itself
         if (enemyAngle >= 292.5f && enemyAngle < 337.5f)
         {
-            theSpriteRenderer.sprite = front;
+            theSpriteRenderer.sprite = slightLeft;
+            theSpriteRenderer.flipX = true;
         }
 
         else if (enemyAngle >= 22.5f && enemyAngle < 67.5f)
@@ -101,7 +99,7 @@ public class spriteRotator : MonoBehaviour
         else if (enemyAngle >= 157.5f && enemyAngle < 202.5f)
         {
             theSpriteRenderer.sprite = back;
-            theSpriteRenderer.flipX = true;
+
         }
 
         else if (enemyAngle >= 202.5f && enemyAngle < 247.5f)
@@ -118,7 +116,7 @@ public class spriteRotator : MonoBehaviour
 
         else if (enemyAngle >= 337.5f || enemyAngle < 22.5f)
         {
-            theSpriteRenderer.sprite = slightLeft;
+            theSpriteRenderer.sprite = front;
         }
 
 
