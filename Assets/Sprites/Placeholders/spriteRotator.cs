@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spriteRotator : MonoBehaviour
+public class SpriteRotator : MonoBehaviour
 {
     [Header("Sprites")]
     public Sprite front;
@@ -31,14 +31,15 @@ public class spriteRotator : MonoBehaviour
         animator = GetComponent<Animator>();
         theSpriteRenderer = GetComponent<SpriteRenderer>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
-        currentWayPoint = GameObject.FindGameObjectWithTag("WayPoints").GetComponent<WayPoints>().currentWayPoint;
-        lookPoint = currentWayPoint.transform;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+        
+
 
         //"Billboardar" spriten
         transform.LookAt(Camera.main.transform.position, Vector3.up);
@@ -47,7 +48,12 @@ public class spriteRotator : MonoBehaviour
 
 
         //Enemyns xyz mot look pointen 
-        lookPointDir = transform.position - lookPoint.position;
+
+        if (lookPoint != null)
+        {
+            lookPointDir = transform.position - lookPoint.position;
+        }
+        
 
         //Enemyns xyz mot kameran
         camDir = transform.position - cam.position;
@@ -71,7 +77,6 @@ public class spriteRotator : MonoBehaviour
             enemyAngle += 360;
         }
 
-        Debug.Log(enemyAngle);
 
         //The sprite rotation itself
         if (enemyAngle >= 292.5f && enemyAngle < 337.5f)

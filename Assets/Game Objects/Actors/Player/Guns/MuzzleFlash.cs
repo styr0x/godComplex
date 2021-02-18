@@ -10,8 +10,8 @@ public class MuzzleFlash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        muzzleFlashPrefab = Resources.Load<GameObject>("MuzzleFlash") as GameObject;
-        muzzleFlashSpritePrefab = Resources.Load<GameObject>("MuzzleFlashSprite") as GameObject;
+        muzzleFlashPrefab = Resources.Load("Prefabs/MuzzleFlash") as GameObject;
+        muzzleFlashSpritePrefab = Resources.Load("Prefabs/MuzzleFlashSprite") as GameObject;
         player = GameObject.FindGameObjectWithTag("Player");
         canvas = GameObject.FindGameObjectWithTag("Canvas");
 

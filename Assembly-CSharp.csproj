@@ -64,30 +64,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemySpawner.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\AttackState.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Enemy\BasicEnemyAi.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\ChaseState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\Damage.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Enemy\EnemyAnimationEvents.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\EnemyDead.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\IdleState.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Enemy\attack.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Enemy\WanderState.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Enemy\WayPoints.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Guns\MuzzleFlash.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\Die.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\Gun.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerAnimationEvents.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerDamaged.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerDead.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerGun.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerIdle.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerMouseLook.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerReload.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
-    <Compile Include="Assets\PlayerDead.cs" />
-    <Compile Include="Assets\PlayerDying.cs" />
-    <Compile Include="Assets\Sprites\Placeholders\spriteRotator.cs" />
-    <Compile Include="Assets\WanderState.cs" />
-    <Compile Include="Assets\WayPoints.cs" />
+    <Compile Include="Assets\Sprites\Placeholders\SpriteRotator.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
