@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class EnemyAnimationEvents : MonoBehaviour
 {
-    float knockBack = 100;
-    GameObject healthBar;
+    GameObject healthBar, ammoBox;
     Slider healthBarSlider;
     // Start is called before the first frame update
     void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("HealthBar");
         healthBarSlider = healthBar.GetComponent<Slider>();
+        ammoBox = Resources.Load("Prefabs/PistolAmmoBox") as GameObject;
+
     }
 
     // Update is called once per frame
@@ -37,5 +38,10 @@ public class EnemyAnimationEvents : MonoBehaviour
     {
         Animator theAnimator = GetComponent<Animator>();
         theAnimator.SetBool("hasSpawned", true);
+    }
+
+    public void spawnAmmoBox()
+    {
+        Instantiate(ammoBox, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
     }
 }

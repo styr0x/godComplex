@@ -9,7 +9,7 @@ public class PlayerGun : MonoBehaviour {
     public float fireRate = 500f;
     float nextTimeToFire = 0f;
 
-    int ammoInClip, totalAmmo, clipCapacity;
+    public int ammoInClip, totalAmmo, clipCapacity;
     bool canReload;
 
     public Camera fpsCam;
@@ -23,8 +23,8 @@ public class PlayerGun : MonoBehaviour {
         ammoUi = GameObject.FindGameObjectWithTag("Ammo").GetComponent<TextMeshProUGUI>();
         playerAnimator = GetComponentInParent<Animator>();
         clipCapacity = 7;
-        ammoInClip = playerAnimator.GetInteger("ammoInClip");
-        totalAmmo = playerAnimator.GetInteger("totalAmmo");
+        ammoInClip = 7;
+        totalAmmo = 21;
         canReload = true;
     }
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class PlayerGun : MonoBehaviour {
     {
         ammoUi.SetText(ammoInClip + "/" + totalAmmo);
 
-        if (Input.GetButtonDown("Fire1") && Time.time > nextTimeToFire && ammoInClip > 0)
+        if (Input.GetMouseButtonDown(0) && Time.time > nextTimeToFire && ammoInClip > 0)
         {
             nextTimeToFire = Time.time + fireRate;
             shoot();

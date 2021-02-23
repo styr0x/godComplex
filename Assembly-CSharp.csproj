@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AmmoPickup.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\AttackState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\ChaseState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\Damage.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
+    <Compile Include="Assets\Sprites\Placeholders\SpriteBillboarder.cs" />
     <Compile Include="Assets\Sprites\Placeholders\SpriteRotator.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -648,6 +650,14 @@
       <Project>{42E9F91D-E53B-9FE3-1ACB-2DDC0112E0D1}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.csproj">
+      <Project>{C088D9BB-D8EC-1D65-0F79-5C9BA5DA050B}</Project>
+      <Name>Unity.Polybrush</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.Editor.csproj">
+      <Project>{38E9EDA2-0423-5A4C-984B-483FCA0181C8}</Project>
+      <Name>Unity.Polybrush.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{FFF6311B-54CE-E829-894E-DC1B5C954E05}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -664,10 +674,6 @@
       <Project>{1692E2D0-03CE-A179-D704-62353DD832F6}</Project>
       <Name>Unity.CollabProxy.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{1B4C0A50-E3F2-6E6C-15F8-76EDF25A87CA}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{15A7F405-6E43-8FED-9825-251CF46A9428}</Project>
       <Name>Unity.Rider.Editor</Name>
@@ -675,10 +681,6 @@
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
       <Project>{6AE7F33D-F78B-5BA7-9B28-1A477577B305}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{3EC71DDC-FA66-0BBA-C7E5-AE48F104623A}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{3DD2820A-5BEE-0FD4-9671-9ADB4F79D238}</Project>

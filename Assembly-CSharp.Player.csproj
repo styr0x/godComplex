@@ -53,14 +53,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Unity.Polybrush">
+      <HintPath>Library/ScriptAssemblies/Unity.Polybrush.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -251,14 +251,14 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Polybrush.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Polybrush.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
@@ -619,6 +619,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AmmoPickup.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\AttackState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\ChaseState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\Damage.cs" />
@@ -640,6 +641,7 @@
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
+    <Compile Include="Assets\Sprites\Placeholders\SpriteBillboarder.cs" />
     <Compile Include="Assets\Sprites\Placeholders\SpriteRotator.cs" />
   </ItemGroup>
   <ItemGroup>

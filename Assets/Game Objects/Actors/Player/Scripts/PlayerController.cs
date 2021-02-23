@@ -27,10 +27,11 @@ public class PlayerController : MonoBehaviour
     {
         if (animator.GetBool("canMove") == true)
         {
+            Crouch();
             Gravity();
             Jump();
             Move();
-            Crouch();
+
         }
         else if (animator.GetBool("canMove") == false)
         {
