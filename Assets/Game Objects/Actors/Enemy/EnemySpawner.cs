@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    GameObject enemyPrefab, enemyParent, enemy;
+    [SerializeField]
+    GameObject enemyPrefab, enemyParent;
+    GameObject enemy;
     float timer, currentTime;
     Vector3 randomPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyParent = GameObject.FindGameObjectWithTag("Enemies");
-        enemyPrefab = Resources.Load("Prefabs/BasicEnemy") as GameObject;
+        //enemyPrefab = Resources.Load("Prefabs/BasicEnemy") as GameObject;
         timer = 5f;
         currentTime = 0f;
     }

@@ -2,26 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class EnemyAnimationEvents : MonoBehaviour
 {
-    GameObject healthBar, ammoBox;
+    [SerializeField]
+    GameObject ammoBox;
+    GameObject healthBar;
     Slider healthBarSlider;
     // Start is called before the first frame update
     void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("HealthBar");
         healthBarSlider = healthBar.GetComponent<Slider>();
-        ammoBox = Resources.Load("Prefabs/PistolAmmoBox") as GameObject;
-
     }
-
     // Update is called once per frame
     void Update()
     {
-     
     }
-
     public void Attack()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -33,13 +29,11 @@ public class EnemyAnimationEvents : MonoBehaviour
         playerAnimator.SetBool("takingDamage", true);
         Debug.Log(health);
     }
-
     public void HasSpawned()
     {
         Animator theAnimator = GetComponent<Animator>();
         theAnimator.SetBool("hasSpawned", true);
     }
-
     public void spawnAmmoBox()
     {
         Instantiate(ammoBox, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);

@@ -8,9 +8,8 @@ public class EnemyDead : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("isDead", true);
-        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
         Debug.Log("I am a dead man, miss me!");
-        Destroy(enemy, 5);
+        Destroy(animator.gameObject, 5);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

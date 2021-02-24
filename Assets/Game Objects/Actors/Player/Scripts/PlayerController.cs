@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController controller;
+    [SerializeField]
     Animator animator;
-
-
+    public CharacterController controller;
     public float speed = 6f;
     public float runSpeed = 2f;
     public float jumpHeight = 3f;
@@ -15,11 +14,15 @@ public class PlayerController : MonoBehaviour
     public float crouchHeight = 0.5f;
 
 
+
+
+
+
     Vector3 gravityVelocity;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+
     }
     
     // Update is called once per frame

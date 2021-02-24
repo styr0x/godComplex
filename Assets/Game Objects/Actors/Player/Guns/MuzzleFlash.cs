@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class MuzzleFlash : MonoBehaviour
 {
-    public float flashTime = 0f;
-    GameObject muzzleFlashPrefab, muzzleFlashSpritePrefab, theFlash, theFlashSprite;
+    [SerializeField]
     GameObject player, canvas;
+    [SerializeField]
+    GameObject muzzleFlashPrefab, muzzleFlashSpritePrefab;
+    public float flashTime = 0f;
+    GameObject theFlash, theFlashSprite;
     // Start is called before the first frame update
     void Start()
     {
-        muzzleFlashPrefab = Resources.Load("Prefabs/MuzzleFlash") as GameObject;
-        muzzleFlashSpritePrefab = Resources.Load("Prefabs/MuzzleFlashSprite") as GameObject;
-        player = GameObject.FindGameObjectWithTag("Player");
-        canvas = GameObject.FindGameObjectWithTag("Canvas");
 
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class WanderState : StateMachineBehaviour
 {
 
-   
+    [SerializeField]
     List<GameObject> wayPoints;
     GameObject currentWayPoint;
 

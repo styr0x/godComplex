@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class IdleState : StateMachineBehaviour
 {
-    GameObject player;
-    Animator playerAnimator;
+    Transform playerPos;
     float distance;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerAnimator = player.GetComponent<Animator>();
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+   
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        distance = Vector3.Distance(animator.transform.position, player.transform.position);
+        distance = Vector3.Distance(animator.transform.position, playerPos.position);
 
         if (distance < animator.GetFloat("discoverDistance"))
         {
