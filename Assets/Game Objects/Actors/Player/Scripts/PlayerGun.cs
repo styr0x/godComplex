@@ -44,7 +44,6 @@ public class PlayerGun : MonoBehaviour
         playerAnimator.SetBool("isShooting", true);
         Debug.Log("Ammo in clip: " + ammoInClip);
         RaycastHit hit;
-        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward);
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             if (hit.transform.tag == "Enemy")

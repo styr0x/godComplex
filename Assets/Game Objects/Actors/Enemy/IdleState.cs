@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class IdleState : StateMachineBehaviour
 {
+    GameObject player;
     Transform playerPos;
+    Animator playerAnimator;
     float distance;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerPos = player.transform;
+        playerAnimator = player.GetComponent<Animator>();
    
     }
 
@@ -18,7 +22,7 @@ public class IdleState : StateMachineBehaviour
     {
         distance = Vector3.Distance(animator.transform.position, playerPos.position);
 
-        if (distance < animator.GetFloat("discoverDistance"))
+        if (distance < animator.GetFloat("discoverDistance") && !playerAnimator.GetBool("isDead"))
         {
             //Do chase state
             animator.SetBool("isChasing", true);

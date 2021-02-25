@@ -400,18 +400,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 0}
-  - m_Name: totalAmmo
-    m_Type: 3
-    m_DefaultFloat: 0
-    m_DefaultInt: 21
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: ammoInClip
-    m_Type: 3
-    m_DefaultFloat: 0
-    m_DefaultInt: 7
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

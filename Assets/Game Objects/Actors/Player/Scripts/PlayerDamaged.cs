@@ -12,12 +12,7 @@ public class PlayerDamaged : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        if (animator.GetBool("takingDamage") == true)
-        {
-            animator.SetBool("takingDamage", false);
-        }
-        
+    {        
         if (animator.GetInteger("health") <= 0)
         {
             animator.SetBool("isDying", true);

@@ -4,20 +4,31 @@ using UnityEngine;
 
 public class PlayerMouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100;
-    public Transform playerBody;
+    [SerializeField]
+    float mouseSensitivity = 100;
+    [SerializeField]
+    Transform playerBody;
     Animator animator;
 
     float xRotation = 0;
     // Start is called before the first frame update
     void Start()
     {
-        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-        Cursor.lockState = CursorLockMode.Locked;    
+        animator = GetComponentInParent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        if (animator.GetBool("canMove"))
+        {
+            mouseLook();
+        }
+
+    }
+
+    private void mouseLook()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

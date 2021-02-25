@@ -6,18 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     Animator animator;
-    public CharacterController controller;
-    public float speed = 6f;
-    public float runSpeed = 2f;
-    public float jumpHeight = 3f;
-    public float gravity = -9.81f;
-    public float crouchHeight = 0.5f;
-
-
-
-
-
-
+    [SerializeField]
+    CharacterController controller;
+    [SerializeField]
+    float speed, runSpeed, jumpHeight, gravity, crouchHeight;
     Vector3 gravityVelocity;
 
     void Start()
