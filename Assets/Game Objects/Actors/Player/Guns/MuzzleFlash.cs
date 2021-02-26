@@ -13,7 +13,7 @@ public class MuzzleFlash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Debug.Log("Hi There Im Muzzle Script");
     }
 
     // Update is called once per frame

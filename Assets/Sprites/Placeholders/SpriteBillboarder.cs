@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class SpriteBillboarder : MonoBehaviour
 {
-    [SerializeField]
-    Vector3 cam;
+    Transform cam;
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main.transform.position;
+        cam = Camera.main.transform;
     }
 
     // Update is called once per frame

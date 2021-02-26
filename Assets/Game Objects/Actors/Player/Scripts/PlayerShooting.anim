@@ -26,7 +26,7 @@ AnimationClip:
       value: {fileID: -4854829337826818713, guid: a19761a4915c89e4f9be14a6ecdeadee,
         type: 3}
     attribute: m_Sprite
-    path: UI Canvas/Gun
+    path: Gun Canvas/Gun
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_SampleRate: 60
@@ -37,7 +37,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1289166251
+      path: 1773864541
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114

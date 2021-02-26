@@ -68,10 +68,12 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("left shift"))
         {
+            animator.SetBool("isRunning", true);
             speed += runSpeed;
         }
         else if (Input.GetKeyUp("left shift"))
         {
+            animator.SetBool("isRunning", false);
             speed -= runSpeed;
         }
 

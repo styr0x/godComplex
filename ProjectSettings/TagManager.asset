@@ -7,14 +7,14 @@ TagManager:
   - Enemy
   - Gun
   - DamageFilter
-  - Canvas
   - HealthBar
   - Ammo
-  - RealUiCanvas
   - Enemies
   - WayPoint
   - WayPoints
   - PistolAmmoPickup
+  - GunCanvas
+  - UiCanvas
   layers:
   - Default
   - TransparentFX

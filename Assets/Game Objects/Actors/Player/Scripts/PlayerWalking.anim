@@ -69,7 +69,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: UI Canvas/Gun
+    path: Gun Canvas/Gun
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -124,7 +124,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: UI Canvas/Gun
+    path: Gun Canvas/Gun
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -136,14 +136,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1289166251
+      path: 1773864541
       attribute: 1460864421
       script: {fileID: 0}
       typeID: 224
       customType: 28
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1289166251
+      path: 1773864541
       attribute: 538195251
       script: {fileID: 0}
       typeID: 224
@@ -161,7 +161,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 1
+    m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -223,7 +223,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: UI Canvas/Gun
+    path: Gun Canvas/Gun
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -278,7 +278,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: UI Canvas/Gun
+    path: Gun Canvas/Gun
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []

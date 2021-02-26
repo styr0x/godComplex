@@ -690,6 +690,14 @@
       <Project>{D8E90ABD-F5D6-D091-DE6F-19A9CF330027}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{1B4C0A50-E3F2-6E6C-15F8-76EDF25A87CA}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{3EC71DDC-FA66-0BBA-C7E5-AE48F104623A}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
