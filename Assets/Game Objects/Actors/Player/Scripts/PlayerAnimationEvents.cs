@@ -6,7 +6,7 @@ public class PlayerAnimationEvents : MonoBehaviour
     [SerializeField]
     Animator theAnimator;
     [SerializeField]
-    GameObject pistol;
+    GameObject pistol, rifle;
     [SerializeField]
     CharacterController controller;
     // Start is called before the first frame update
@@ -41,7 +41,14 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     public void callDoneReloading()
     {
-        pistol.GetComponent<Pistol>().doneReloading();
+        try
+        {
+            pistol.GetComponent<Pistol>().doneReloading();
+        }
+        catch
+        {
+            rifle.GetComponent<M4>().doneReloading();
+        }
     }
 
 }

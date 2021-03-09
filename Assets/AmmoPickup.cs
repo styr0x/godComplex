@@ -6,6 +6,7 @@ public class AmmoPickup : MonoBehaviour
 {
     GameObject player;
     Pistol pistol;
+    M4 m4;
     Animator playerAnimator;
     float distance;
     int totalAmmo;
@@ -13,7 +14,8 @@ public class AmmoPickup : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        pistol = player.GetComponent<Pistol>();
+        pistol = player.GetComponentInChildren<Pistol>();
+        m4 = player.GetComponentInChildren<M4>();
 
     }
 
@@ -24,7 +26,16 @@ public class AmmoPickup : MonoBehaviour
         
         if (distance < 1.5)
         {
-            pistol.totalAmmo += 21;
+            try
+            {
+                m4.totalAmmo += 30;
+                
+            }
+            catch
+            {
+                pistol.totalAmmo += 21;
+            }
+            
             Destroy(gameObject);
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class MuzzleFlash : MonoBehaviour
 {
     [SerializeField]
-    GameObject player, pistol;
+    GameObject player, pistol, rifle;
     [SerializeField]
     GameObject muzzleFlashPrefab, muzzleFlashSpritePrefab;
     public float flashTime = 0f;
@@ -26,8 +26,17 @@ public class MuzzleFlash : MonoBehaviour
     public void doMuzzleFlash()
     {
         theFlash = Instantiate(muzzleFlashPrefab, player.transform);
-        theFlashSprite = Instantiate(muzzleFlashSpritePrefab, pistol.transform);
-        theFlashSprite.transform.SetParent(pistol.transform);
+        try
+        {
+            theFlashSprite = Instantiate(muzzleFlashSpritePrefab, pistol.transform);
+            theFlashSprite.transform.SetParent(pistol.transform);
+        }
+        catch
+        {
+            theFlashSprite = Instantiate(muzzleFlashSpritePrefab, rifle.transform);
+            theFlashSprite.transform.SetParent(rifle.transform);
+        }
+
         theFlashSprite.transform.SetAsFirstSibling();
         theFlashSprite.transform.Rotate(0, 0, Random.Range(-30f, 30f));
         theFlash.transform.SetParent(player.transform);

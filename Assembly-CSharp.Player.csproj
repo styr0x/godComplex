@@ -636,6 +636,7 @@
     <Compile Include="Assets\Game Objects\Actors\Enemy\WanderState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\WayPoints.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Guns\MuzzleFlash.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\M4.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\Pistol.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerAnimationEvents.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerController.cs" />
@@ -646,8 +647,9 @@
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerReload.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
-    <Compile Include="Assets\Sprites\Placeholders\SpriteBillboarder.cs" />
-    <Compile Include="Assets\Sprites\Placeholders\SpriteRotator.cs" />
+    <Compile Include="Assets\Sprites\SpriteBillboarder.cs" />
+    <Compile Include="Assets\Sprites\SpriteRotator.cs" />
+    <Compile Include="Assets\WeaponChanger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
