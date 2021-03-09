@@ -59,19 +59,22 @@ public class SpriteRotator : MonoBehaviour
         if (enemyAngle >= 292.5f && enemyAngle < 337.5f)
         {
             theSpriteRenderer.sprite = slightLeft;
-            theSpriteRenderer.flipX = true;
+            
         }
         else if (enemyAngle >= 22.5f && enemyAngle < 67.5f)
         {
             theSpriteRenderer.sprite = slightRight;
+            theSpriteRenderer.flipX = true;
         }
         else if (enemyAngle >= 67.5f && enemyAngle < 112.5f)
         {
             theSpriteRenderer.sprite = right;
+            theSpriteRenderer.flipX = true;
         }
         else if (enemyAngle >= 112.5f && enemyAngle < 157.5f)
         {
             theSpriteRenderer.sprite = slightBackRight;
+            theSpriteRenderer.flipX = true;
         }
         //Notera att de nästa 3 rotationerna är spegelvända
         else if (enemyAngle >= 157.5f && enemyAngle < 202.5f)
@@ -81,12 +84,12 @@ public class SpriteRotator : MonoBehaviour
         else if (enemyAngle >= 202.5f && enemyAngle < 247.5f)
         {
             theSpriteRenderer.sprite = slightBackLeft;
-            theSpriteRenderer.flipX = true;
+            
         }
         else if (enemyAngle >= 247.5f && enemyAngle < 292.5f)
         {
             theSpriteRenderer.sprite = Left;
-            theSpriteRenderer.flipX = true;
+            
         }
         else if (enemyAngle >= 337.5f || enemyAngle < 22.5f)
         {

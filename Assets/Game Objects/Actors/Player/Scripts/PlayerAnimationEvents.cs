@@ -6,7 +6,7 @@ public class PlayerAnimationEvents : MonoBehaviour
     [SerializeField]
     Animator theAnimator;
     [SerializeField]
-    GameObject playerGun;
+    GameObject pistol;
     [SerializeField]
     CharacterController controller;
     // Start is called before the first frame update
@@ -34,8 +34,14 @@ public class PlayerAnimationEvents : MonoBehaviour
         theAnimator.SetBool("isDying", false);
         theAnimator.SetBool("isDead", true);
     }
-    public void doMuzzleFlash()
+    public void callDoMuzzleFlash()
     {
-        playerGun.GetComponent<MuzzleFlash>().doMuzzleFlash();
+        pistol.GetComponent<MuzzleFlash>().doMuzzleFlash();
     }
+
+    public void callDoneReloading()
+    {
+        pistol.GetComponent<Pistol>().doneReloading();
+    }
+
 }

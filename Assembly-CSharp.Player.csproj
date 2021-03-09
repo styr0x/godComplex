@@ -62,11 +62,11 @@
     <Reference Include="Unity.Timeline">
       <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>
@@ -263,6 +263,9 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
@@ -271,9 +274,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/JART/Documents/GitHub/godComplex/godComplex/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -636,15 +636,14 @@
     <Compile Include="Assets\Game Objects\Actors\Enemy\WanderState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\WayPoints.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Guns\MuzzleFlash.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\Pistol.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerAnimationEvents.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerDamaged.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerDead.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerGun.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerIdle.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerMouseLook.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerReload.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
     <Compile Include="Assets\Sprites\Placeholders\SpriteBillboarder.cs" />

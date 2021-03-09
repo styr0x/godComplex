@@ -75,15 +75,14 @@
     <Compile Include="Assets\Game Objects\Actors\Enemy\WanderState.cs" />
     <Compile Include="Assets\Game Objects\Actors\Enemy\WayPoints.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Guns\MuzzleFlash.cs" />
+    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\Pistol.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerAnimationEvents.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerDamaged.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerDead.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerGun.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerIdle.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerMouseLook.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerReload.cs" />
-    <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Game Objects\Actors\Player\Scripts\PlayerWalking.cs" />
     <Compile Include="Assets\Sprites\Placeholders\SpriteBillboarder.cs" />
@@ -674,6 +673,10 @@
       <Project>{1692E2D0-03CE-A179-D704-62353DD832F6}</Project>
       <Name>Unity.CollabProxy.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{1B4C0A50-E3F2-6E6C-15F8-76EDF25A87CA}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{15A7F405-6E43-8FED-9825-251CF46A9428}</Project>
       <Name>Unity.Rider.Editor</Name>
@@ -682,6 +685,10 @@
       <Project>{6AE7F33D-F78B-5BA7-9B28-1A477577B305}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{3EC71DDC-FA66-0BBA-C7E5-AE48F104623A}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{3DD2820A-5BEE-0FD4-9671-9ADB4F79D238}</Project>
       <Name>Unity.TextMeshPro</Name>
@@ -689,14 +696,6 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{D8E90ABD-F5D6-D091-DE6F-19A9CF330027}</Project>
       <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{1B4C0A50-E3F2-6E6C-15F8-76EDF25A87CA}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{3EC71DDC-FA66-0BBA-C7E5-AE48F104623A}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

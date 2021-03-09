@@ -5,7 +5,7 @@ using UnityEngine;
 public class AmmoPickup : MonoBehaviour
 {
     GameObject player;
-    PlayerGun playerGun;
+    Pistol pistol;
     Animator playerAnimator;
     float distance;
     int totalAmmo;
@@ -13,7 +13,7 @@ public class AmmoPickup : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerGun = player.GetComponent<PlayerGun>();
+        pistol = player.GetComponent<Pistol>();
 
     }
 
@@ -24,7 +24,7 @@ public class AmmoPickup : MonoBehaviour
         
         if (distance < 1.5)
         {
-            playerGun.totalAmmo += 21;
+            pistol.totalAmmo += 21;
             Destroy(gameObject);
         }
     }
